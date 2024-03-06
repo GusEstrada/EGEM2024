@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto4</title>
+</head>
+<body>
+
+    <script>
+        let variable = 10;
+        let variable2 = "Hola";
+        let variable3 = true;
+        let var4 = null;
+        let var5 = [1, 2, 3, 4, 5];
+        console.log("Tipo: ", typeof variable2);
+        console.log("Tipo: ", typeof variable3);
+        console.log("Tipo Nulo: ", typeof var4);
+        console.log("Tipo arreglo: ", typeof var5);
+        console.log("Modelo", carro.modelo );
+        console.log("Modelo", carro["modelo"] );
+ 
+        let saludo;
+        console.log(saludo);
+        let hora = new Date().getHours();
+        console.log(hora);
+ 
+        hora = 14;
+        if( hora < 12) {
+            console.log("Buenos días");
+        } else if (hora < 19) {
+            console.log("Buenas tardes");
+        } else {
+            console.log("Buenas noches");
+        }
+ 
+        let diaDeLaSemana = new Date().getDay();
+        console.log(diaDeLaSemana);
+ 
+        //diaDeLaSemana = 5;
+ 
+        switch(diaDeLaSemana) {
+            case 0:
+                console.log("Domingo");
+                break;
+            case 1:
+                console.log("Lunes");
+                break;
+            case 2:
+                console.log("Martes");
+                break;
+            case 3:
+                console.log("Miércoles");
+                break;
+            case 4:
+                console.log("Jueves");
+                break;
+            case 5:
+                console.log("Viernes");
+                break;
+            case 6:
+                console.log("Sábado");
+                break;
+            default:
+                console.log("Día no válido");
+                break;
+        }
+ 
+        let j = 500;
+        let nombre = "Mariana";
+        for(let j = 10; j <= 20; j++) {
+            console.log(j);
+            let nombre = "Romina";
+            console.log("Nombre dentro del for:", nombre);
+        }
+        console.log("Valor de j fuera del ciclo:", j);
+ 
+        console.log("Nombre:", nombre);
+ 
+        const PI = Math.PI;
+        console.log(PI);
+ 
+        const persona = { nombre : "Juan", edad : 30, sexo : "M", casado : false};
+ 
+        for(let propiedad in persona) {
+            console.log(propiedad, persona[propiedad]);
+        }
+ 
+        let marcas = ["Toyota", "Nissan", "Honda", "Mazda"];
+        for(let marca of marcas) {
+            console.log(marca);
+        }
+ 
+        j = 1;  
+        while(j < 30) {
+            console.log(j);
+            j++;
+        }
+
+    </script>
+    
+</body>
+</html>
