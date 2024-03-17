@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos
+    </title>
+</head>
+
+<style>
+body    {
+    padding: 2em;
+}
+</style>
+
+<body>
+    <h1>Arreglos</h1>
+    <p id="lista1"></p>
+    <p id="lista2"></p>
+    <p id="lista3"></p>
+    <p id="lista4"></p>
+    <p id="lista5"></p>
+    <p id="lista6"></p>
+    <p id="lista7"></p>
+    <p id="lista8"></p>
+
+    <script>
+        const fruits = ["apple", "orange", "banana"];
+        let size = fruits.length;
+        console
+
+        for (let i = 0; i < size; i++) {
+            console.log(fruits[i]);
+        }
+
+        let lista1 = document.getElementById('lista1');
+
+        lista1.innerHTML = fruits.toString();
+        console.log("La fruta es :",fruits);
+        console.warn("La fruta es :",fruits);
+        console.error("La fruta es :",fruits);
+        console.info("La fruta es :",fruits);   
+        console.table(fruits);
+        console.debug("La fruta es :",fruits);
+
+        let lista2 = document.getElementById('lista2');
+        lista2.innerHTML = fruits.join(" & ");
+
+        let lista3 = document.getElementById('lista3');
+        fruits.pop(); //Elimina el ultimo elemento
+        lista3.innerHTML = "lista3: " + fruits.join(" +++++++++ ");
+
+        let lista4 = document.getElementById('lista4');
+        fruits.push("kiwi"); //Agrega un elemento al final
+        fruits.push('melon');
+        lista4.innerHTML = "lista4: " + fruits.join(" ******** ");
+
+        let lista5 = document.getElementById('lista5');
+        fruits.shift(); //Elimina el primer elemento
+        lista5.innerHTML = "lista5: " + fruits.join(" ---------- ");
+
+        let lista6 = document.getElementById('lista6');
+        fruits.unshift('mango'); //Agrega un elemento al principio
+        lista6.innerHTML = "lista6: " + fruits.join(" $$$$$$$$$$ ");
+
+        const nomHombres = ['Angel', 'Juan', 'Pedro', 'Carlos', 'Luis'];
+        const nomMujeres = ['Ana', 'Maria', 'Sofia', 'Luisa', 'Laura'];
+
+        const listaNombres = nomHombres.concat(nomMujeres); //Concatena dos arreglos
+        lista7.innerHTML = "lista7: " + listaNombres.join(" / ");
+    </script>
+    
+</body>
+</html>
