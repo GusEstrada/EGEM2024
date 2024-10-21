@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="Author" content="Castañeda">
+    <meta name="Date" content="21-10-2024">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <link rel="stylesheet" href="Style/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Style/myStyle.css">
+</head>
+<style>
+
+    .container h1{
+        font-size: 3rem;
+    }
+
+    main {
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 10px 0;
+        color: rgb(255, 255, 255);
+    }
+
+
+    /* Estilos para el texto de las tarjetas */
+    .card-text {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: black
+    }
+
+    /* Estilos para las imágenes */
+    .img-fluid {
+        max-width: 100%; 
+        height: auto;   
+    }
+
+    .card-body {
+        padding: 1.5rem; 
+    }
+
+
+    .card:hover {
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .imgservices{
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s, box-shadow 0.3s; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    .imgservices:hover{
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    }
+
+</style>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="redirectToServicios()" class="active">Servicios</a></li>
+                <li><a href="#" onclick="redirectToColecciones()">Colecciones</a></li>
+                <li><a href="#" onclick="redirectToHome()" class="logo">TRDG UNITY</a></li>
+                <li><a href="#" onclick="redirectToNosotros()">Nosotros</a></li>
+                <li><a href="#" onclick="redirectToContactos()">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="Container">
+        <h1 class="text-center my-4">SERVICIOS</h1>
+
+        <!-- PRIMERA CARTA -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-6">
+                <img class="imgservices" src="image/pweb.jpg" alt="Imagen izquierda" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3">    
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo de páginas web</h5>
+                        <p class="card-text">Creamos páginas web a medida, optimizadas para rendimiento y diseño, con una interfaz intuitiva y responsive. Nos enfocamos en la experiencia del usuario (UX) y el diseño atractivo (UI), asegurando que tu sitio web no solo sea funcional, sino que también represente la identidad de tu marca. Ofrecemos servicios completos, desde sitios de una sola página hasta sitios web complejos con múltiples secciones, integraciones y gestión de contenido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEGUNDA CARTA -->
+        <div class="row mb-4 align-items-center">
+            <div class="col-md-6">
+                <div class="card mb-3">    
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollo de aplicaciones móviles</h5>
+                        <p class="card-text"> Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android, con un enfoque en la experiencia del usuario y la funcionalidad. Creamos aplicaciones móviles personalizadas para satisfacer las necesidades de tu negocio, desde aplicaciones de comercio electrónico y redes sociales hasta aplicaciones de productividad y gestión de proyectos. Nuestro equipo de desarrolladores de aplicaciones móviles trabaja en estrecha colaboración contigo para garantizar que tu aplicación cumpla con tus expectativas y objetivos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img class="imgservices" src="image/Appw.jpg" alt="Imagen derecha" class="img-fluid">
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" >
+                <img src="image/F.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com">
+                <img src="image/I.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.whatsapp.com">
+                <img src="image/W.jpg" alt="WhatsApp">
+            </a><p>Cel. 477 180 8558</p>
+        </div>
+        <div class="information">
+            <p>Email. tdrg@gmail.com</p>
+        </div>
+    </footer>
+    
+    <script src="Style/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="js/Conexiones.js"></script>
+</body>
+</html>

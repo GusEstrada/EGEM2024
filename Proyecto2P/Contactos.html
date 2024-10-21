@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="Author" content="Castañeda">
+    <meta name="Date" content="21-10-2024">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colecciones</title>
+    <link rel="stylesheet" href="Style/myStyle.css">
+    <link rel="stylesheet" href="Style/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+</head>
+
+<style>
+
+    
+
+    .sidebar {
+            width: 200px;
+            background-color: transparent;
+            padding: 15px;
+            height: calc(100vh - 60px);
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 80px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 20px;
+            display: block;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            padding: 3rem;
+        }
+
+        .sidebar a:hover {
+            background-color: #0B0E20;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 50px 20px;
+            flex-grow: 1;
+            margin-left: 220px;
+        }
+
+        .contact-section h1 {
+            font-size: 2.5em;
+            margin-bottom: 60px;
+            color: rgb(255, 255, 255);
+            position: relative;
+            z-index: 1;
+        }
+
+           .contact-card {
+            background-color: white;
+            border-radius: 30px;
+            padding: 100px; /* Aumentar padding */
+            width: 40%; /* Aumentar ancho */
+            max-width: 600px; /* Aumentar max-width */
+            margin: 20px auto;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+            color: black;
+            position: relative; /* Añadido para la alineación */
+        }
+
+        .contact-info h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            position: absolute; /* Alineación */
+            right: 20px; /* Espaciado desde el lado derecho */
+            bottom: 20px; /* Espaciado desde la parte inferior */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        body{
+            background-color: #2E3460;
+            background-image: url("/image/Img1.jpg");
+            background-size: cover;
+        }
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="redirectToServicios()">Servicios</a></li>
+                <li><a href="#" onclick="redirectToColecciones()">Colecciones</a></li>
+                <li><a href="#" onclick="redirectToHome()" class="logo">TRDG UNITY</a></li>
+                <li><a href="#" onclick="redirectToNosotros()" >Nosotros</a></li>
+                <li><a href="#" onclick="redirectToContactos()" class="active">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <h2></h2>
+            <h2></h2>
+            <ul>
+                <li><a href="#seccion1"> Gustavo Estrada </a></li>
+                <h2></h2>
+                <li><a href="#seccion2"> Ricardo Islas </a></li>
+                <h2></h2>
+                <li><a href="#seccion3">Diego Castañeda </a></li>
+                <h2></h2>
+                <li><a href="#seccion4">Rogelio Ayala </a></li>
+            </ul>
+        </div>
+
+        <main class="contact-section" style="margin-top: -50px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <h1></h1>
+            
+            
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2><b>Contactos</b></h2>
+                    <p>Cel. 477 180 8558</p>
+                    <p>Email. tdrg@gmail.com</p>
+                    <h2></h2>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="image/Facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="image/Instagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="image/X.png" alt="Twitter/X"></a>
+                    <a href="#"><img src="/image/Github.png" alt="GitHub"></a>
+                    <a href="#"><img src="image/Whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="Style/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>  
+    <script src="js/Conexiones.js"></script>
+</body>
+</html>
