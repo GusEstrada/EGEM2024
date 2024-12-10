@@ -1,0 +1,217 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif; 
+}
+
+
+.hero {
+  text-align: center;
+  margin: 30px 20px;
+  background-color: #D9D9D9;
+}
+
+.hero h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.hero hr {
+  width: 60%;
+  margin: 20px auto;
+  border: 1px solid #D9D9D9;
+}
+
+/* Mision */
+.mision {
+  margin: 10px auto;
+  width: 50%;
+}
+
+.mision img {
+  max-width: 150px;
+  float: left;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  margin-right: 100px;
+}
+
+.mision .text-box {
+  color: #000000;
+}
+
+.mision .text-box h2 {
+  font-size: 42px;
+}
+
+.mision .text-box p {
+  font-size: 16px;
+}
+
+/* Visión */
+.vision {
+  margin: 100px auto;
+  width: 50%;
+}
+
+.vision img {
+  max-width: 150px;
+  float: right;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  margin-left: 100px;
+}
+
+.vision .text-box {
+  color: #000000;
+}
+
+.vision .text-box h2 {
+  font-size: 42px;
+}
+
+.vision .text-box p {
+  font-size: 16px;
+}
+
+/* Servicios */
+.servicios .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D9D9D9;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.servicios .titulo h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+}
+
+.servicios .lista-servicios {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.servicios .servicio {
+  flex: 1 1 calc(50% - 20px); /* Dos servicios por fila en pantallas medianas */
+  text-align: center;
+}
+
+.servicios .servicio h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+  margin: 10px 0;
+}
+
+.servicios .contactar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.servicios .contactar button {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.servicios .contactar button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+/* General Reset */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #0B0E20;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  bottom: -40px;
+  left: 0;
+  margin-top: auto; /* Empuja hacia el final */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 200px;
+  text-align: center;
+}
+
+.footer-links a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-rights {
+  margin-top: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .mision,
+  .vision {
+    flex-direction: column; /* Imagen y texto apilados */
+  }
+
+  .servicios .lista-servicios {
+    flex-direction: column; /* Un servicio por fila */
+  }
+
+  .servicios .titulo h2 {
+    font-size: 18px;
+  }
+
+  .footer-content {
+    flex-direction: column; /* Elementos en una columna */
+  }
+}
+

@@ -1,0 +1,308 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: 'Raleway', sans-serif; 
+
+    overflow-x: hidden !important;
+   
+}
+
+main {
+    font-family: 'Raleway', sans-serif; 
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    position: relative;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px 10px; 
+    width: 100%;
+    max-width: 1100px; 
+    box-sizing: border-box;
+    margin-top: 70px; 
+    margin-bottom: 70px; 
+}
+
+
+.card.contact-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 10px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+}
+
+.card h2 {
+    text-align: center;
+    padding: 20px; 
+    background: #0047ab;
+    color: #fff;
+    margin: 0;
+    font-size: 24px; 
+}
+
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.contact-info {
+    width: 40%; 
+    padding-right: 20px; 
+    background-color: #0047ab;
+    color: #fff;
+    border-radius: 8px;
+    margin-right: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contact-info:hover {
+    transform: scale(1.05) translateY(-10px); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); 
+}
+
+.info-title {
+    font-size: 18px; 
+    margin-bottom: 10px; 
+}
+
+.contact-info p {
+    text-align: center;
+}
+
+.contact-info .email, .contact-info .phone {
+    font-size: 16px; 
+    margin-top: 10px; 
+}
+
+.contact-image {
+    margin-top: 15px; 
+    width: 80%;
+    max-width: 140px; 
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contact-image:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); 
+}
+
+
+.contact-form {
+    width: 48%; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.contact-form label {
+    display: block;
+    font-size: 16px; 
+    margin: 10px 0 8px; 
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px; 
+}
+
+.contact-form button.submit-button {
+    width: 100%;
+    padding: 12px; 
+    background-color: #0047ab;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.contact-form button.submit-button:hover {
+    background-color: #003c8f;
+}
+
+/* Para pantallas pequeñas como móviles */
+@media (max-width: 768px) {
+    .contact-container {
+        margin-top: 30px; 
+        margin-bottom: 30px; 
+        padding: 15px 5px; 
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;
+        padding: 10px; 
+    }
+
+    .contact-form {
+        width: 100%;
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    .card h2 {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    .info-title {
+        font-size: 14px; 
+        margin-bottom: 8px; 
+    }
+
+    .contact-info p, .contact-info .email, .contact-info .phone {
+        font-size: 14px; 
+        margin-top: 8px; 
+    }
+
+    .contact-image {
+        width: 75%;
+        max-width: 120px; 
+    }
+
+    .contact-form label {
+        font-size: 14px; 
+        margin: 8px 0 4px; 
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 12px; 
+        padding: 8px; 
+        margin: 8px 0; 
+    }
+
+    .contact-form button.submit-button {
+        font-size: 14px; 
+        padding: 8px; 
+    }
+}
+
+/* Para pantallas extra pequeñas, como teléfonos en modo apaisado */
+@media (max-width: 480px) {
+    .contact-info {
+        width: 100%;
+        margin-bottom: 12px; 
+        margin-right: 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding-left: 10px; 
+        padding-right: 10px; 
+    }
+
+    .contact-form button.submit-button {
+        font-size: 12px;
+        padding: 6px; 
+    }
+}
+
+/* General Reset */
+
+a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  /* Footer */
+  .footer {
+    width: 100%;
+    background-color: #0B0E20;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: -40px;
+    left: 0;
+    margin-top: auto; /* Empuja hacia el final */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 200px;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-social a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .footer-rights {
+    margin-top: 10px;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 20px;
+    }
+  
+    .hero p {
+      font-size: 14px;
+    }
+  
+    .mision,
+    .vision {
+      flex-direction: column; /* Imagen y texto apilados */
+    }
+  
+    .servicios .lista-servicios {
+      flex-direction: column; /* Un servicio por fila */
+    }
+  
+    .servicios .titulo h2 {
+      font-size: 18px;
+    }
+  
+    .footer-content {
+      flex-direction: column; /* Elementos en una columna */
+    }
+  }
+  

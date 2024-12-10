@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../styles/NAVFOOTER.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
+    
+    <main>
+        <div class="contact-container">
+            <!-- Card Principal -->
+            <div class="card contact-card">
+                <h2>CONTACTO</h2>
+                <div class="card-content">
+                    <!-- Lado izquierdo con correo, teléfono e imagen -->
+                    <div class="contact-info">
+                        <p class="info-title">Email: o7unity@gmail.com</p>
+                        <p class="info-title">Teléfono: 123 456 7890</p>
+                        <img src="./IMAGE/LogoO7.png" alt="Imagen de contacto" class="contact-image">
+                    </div>
+                    <!-- Formulario -->
+                    <div class="contact-form">
+                        <form id="contactForm" class="form">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+    
+                            <label for="phone">Teléfono:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono" pattern="^\d{10}$" required title="El teléfono debe tener 10 dígitos">
+    
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
+    
+                            <button type="submit" class="submit-button">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <a href="TerminosYCondiciones.html">Términos y Condiciones</a>
+            <a href="avisos_deprivacidad.html">Avisos de privacidad</a>
+            <a href="trabajaConNosotros.html">Trabaja con nosotros</a>
+          </div>
+          <div class="footer-contact">
+            <p>Tel: +52 477 786 0582</p>
+            <p>Correo: O7UNITY@gmail.com</p>
+          </div>
+          <div class="footer-social">
+            <p>Síguenos</p>
+            <div>
+              <a href="#">Instagram: @o7_UNITY</a>
+            </div>
+            <div>
+              <a href="">Facebook: @o7UNITY</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-rights">
+          <p>© Todos los derechos reservados</p>
+        </div>
+      </footer>
+      
+    
+    
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Enviado correctamente!',
+                        text: 'Tu mensaje ha sido enviado.',
+                        confirmButtonText: 'OK'
+                    });
+                    e.target.reset();
+                } else {
+                    throw new Error('Error al enviar el mensaje.');
+                }
+            } catch (error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pudo enviar tu mensaje. Intenta nuevamente.',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    </script>
+    <script src="./navbarlogic.js"></script>
+</body>
+</html>
